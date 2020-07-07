@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Document</title>
+
+  <style>
+    .listaSpesa{
+      padding: 0;
+    }
+    .listaSpesa li{
+      width: 300px;
+      background: red;
+      padding: 10px;
+      border: 1px solid black;
+      list-style: none;
+    }
+    .template{
+      display: none;
+    }
+    .elimina{
+      float: right;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Aggiungi prodotto</h3>
+  <input type="text" name="prodotto" placeholder="Inserire compito">
+  <button type="button" name="button" class="inserisci">Inserisci</button>
+  <ul class="listaSpesa">
+  </ul>
+
+  <!-- Template handlebars -->
+  <script id="lista-template" type="text/x-handlebars-template">
+    <li data-id='{{ id }}'>{{ compito }}<button class="elimina">Elimina</button></li>
+  </script>
+
+  <!-- Connessione js -->
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
